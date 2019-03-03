@@ -36,10 +36,9 @@ def main():
 
     optimizer = model.create_optimizer()
 
-    checkpoint_dir = './training_checkpoints'
-    checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
     checkpoint_dir, checkpoint = model.create_checkpoint(optimizer,
                                                          encoder, decoder)
+    checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
 
     epochs = 10
 
